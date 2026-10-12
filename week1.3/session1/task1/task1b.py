@@ -3,10 +3,14 @@
 fruit = ['apple','pear','banana','orange']
 
 # loop through the list
-while fruit:
+# while fruit:
+# 	print(fruit.pop())
+
+for container in fruit:
 	print(fruit.pop())
 
-
+if fruit == True:
+	
 # Why does this work?
 
 # What features of Python does it rely on?
