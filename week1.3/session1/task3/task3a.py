@@ -4,6 +4,9 @@ i = 0
 
 while i < 20:
     i = i + 1
+    multiple_of_3 = i % 3 == 0    #if i % 3 != 0: (this means when i divided by 3 does not equal to 0, it will print all non multiples of 3.)
+    if multiple_of_3:             #     print(i)
+        continue
     print(i)
 
 # Add logic using continue so that multiples of 3 are not printed out
