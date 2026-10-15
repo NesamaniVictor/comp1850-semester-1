@@ -4,13 +4,14 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 filename = input("Enter filename: ")
-print(filename)
+print("You entered:", filename)
+print("Length:", len(filename))
 
 with open(filename, "r") as infile:
     content = infile.read()
 
-words = content.split(" ")
-print(len(words))
+# words = content.split(" ")
+# print(len(words))
 
 #print words
 # open and read the file
