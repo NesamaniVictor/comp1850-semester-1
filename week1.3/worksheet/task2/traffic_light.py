@@ -15,17 +15,17 @@ print(f"Time {systime:03} State {state}")
 for systime in range(1, maxtime + 1):
     cycle_time = systime % 15
 
-    if cycle_time < 5:
+    if cycle_time < states["red"]:
         state = "red"
-    elif cycle_time < 8:
+    elif cycle_time < states["red"] + states["red_amber"]:
         state = "red_amber"
-    elif cycle_time < 13:
+    elif cycle_time < states["red"] + states["red_amber"] + states["green"]:
         state = "green"
     else:
         state = "amber"
 
 #Print the time and state using the required format
-print(f"Time {systime:03} State {state}")
+    print(f"Time {systime:03} State {state}")
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 

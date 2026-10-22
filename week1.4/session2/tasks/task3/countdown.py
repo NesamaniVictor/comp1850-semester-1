@@ -4,6 +4,7 @@
 # Your task is to complete the function based on the details in the docstring.
 
 def countdown(n):
+
     """
     This recursive function prints numbers from n down to 0.
 
@@ -15,11 +16,15 @@ def countdown(n):
     """
 
     # Complete your code here
-    # base case
 
-    # recursive case
-
-
+    #print current number
+    print(n)
+    # base case: stop when n reaches 0
+    if n == 0:
+        return
+    countdown(n-1)
+    # recursive case: call the function with n-1 countdown(n-1)
+   
 # check if correct output is produced
 countdown(30)    # 30 ... 0 (Note: each number is printed in a separate line)
 countdown(5)     # 5 ... 0  (Note: each number in printed in a separate line)
