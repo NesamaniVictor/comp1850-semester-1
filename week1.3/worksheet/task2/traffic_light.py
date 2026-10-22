@@ -7,9 +7,9 @@ Name: Nesamani Victor
 states = { "red":4, "red_amber":3, "green":5, "amber":3 } #dictionary
 
 systime = 0
-maxtime = int(input("enter:  "))  # read an integer number of steps (>0)
-
+maxtime = int(input())  # read an integer number of steps (>0)
 state = "red"
+
 print(f"Time {systime:03} State {state}")
 
 for systime in range(1, maxtime):
