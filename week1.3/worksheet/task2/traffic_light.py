@@ -15,11 +15,11 @@ print(f"Time {systime:03} State {state}")
 for systime in range(1, maxtime + 1):
     cycle_time = systime % 15
 
-    if cycle_time < 4:
+    if cycle_time < 5:
         state = "red"
-    elif cycle_time < 7:
+    elif cycle_time < 8:
         state = "red_amber"
-    elif cycle_time <12:
+    elif cycle_time < 13:
         state = "green"
     else:
         state = "amber"
