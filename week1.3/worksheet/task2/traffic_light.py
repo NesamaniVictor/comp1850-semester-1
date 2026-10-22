@@ -12,7 +12,7 @@ state = "red"
 
 print(f"Time {systime:03} State {state}")
 
-for systime in range(1, maxtime):
+for systime in range(1, maxtime + 1):
     cycle_time = systime % 15
 
     if cycle_time < 4:
