@@ -5,6 +5,7 @@ Classes for working with two-dimensional geometry.
 """
 
 import math
+from turtle import circle
 
 
 class Point:
@@ -44,16 +45,16 @@ class Circle:
     """
 
     def __init__(self, radius, centre=Point(0.0, 0.0)):
-        """
-        Creates a Circle, given values for radius & centre coordinates.
-
-        Radius must always be supplied. Centre coordinates are optional
-        but should be provided as a Point object. If they are omitted, the
-        circle will be centred at the origin.
-        """
         self.radius = radius
         self.centre = centre
 
+    """
+    Creates a Circle, given values for radius & centre coordinates.
+    Radius must always be supplied. Centre coordinates are optional
+    but should be provided as a Point object. If they are omitted, the
+    circle will be centred at the origin.   
+    """
+ 
     def area(self):
         """
         Returns the area of this Circle.
@@ -73,3 +74,5 @@ class Circle:
         return f"radius={self.radius}, centre={self.centre}"
 
     # Implement your __contains__() method here
+    def __contains__(self, point):
+        return self.centre.distance_to(point) < self.radius
