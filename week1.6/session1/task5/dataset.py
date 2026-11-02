@@ -33,27 +33,29 @@ class QuakeDataset:
 
         The new data replaces any existing data.
         """
-        # Write code here to replace existing data with new earthquake data.
-        # Use the value returned by the feed's reader() method as the
-        # subject of a for loop.
+        self.data = []
 
-        # Keep in mind that the items obtained by this for loop will be
-        # dictionaries. You will need to extract the required values from
-        # each dictionary and convert them into the required types before
-        # creating a Quake object and storing it in the list.
+        for row in self.feed.reader():
+            quake = Quake(
+                when=datetime.fromisoformat(row["time"].replace("Z", "+00:00")),
+                longitude=float(row["longitude"]),
+                latitude=float(row["latitude"]),
+                depth=float(row["depth"]),
+                magnitude=float(row["mag"])
+        )
+        self.data.append(quake)
 
     def __len__(self):
         """
         Returns the size of this dataset.
         """
-        # Write code here that returns the number of quakes downloaded
+        return len(self.data)
 
     def __str__(self):
         """
         Returns information on this dataset as a string.
         """
-        # Write code here to create and return a string representation
-        # (Include number of quakes and details of the feed that was used)
+        return f"{len(self.data)} quakes, from {self.feed}"
 
     def mean_depth(self):
         """
