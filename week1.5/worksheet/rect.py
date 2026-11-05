@@ -8,12 +8,12 @@ class Rectangle:
         """
         Creates a Rectangle, given values for width and height.
         """
-        if not isinstance(width, int) or not isinstance(width, bool):
-            raise TypeError("Width must be an integer")
-        if not isinstance(height, int) or not isinstance(height, bool):
-            raise TypeError("Height must be an integer")
+        if not isinstance(width, int):
+            raise TypeError
+        if not isinstance(height, int):
+            raise TypeError
         if width <= 0 or height <= 0:
-            raise ValueError("Width and height must be greater than 0")
+            raise ValueError
         
         self.width = width
         self.height = height
