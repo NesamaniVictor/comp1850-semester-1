@@ -10,17 +10,20 @@ def calculate_average(scores):
     # logging.disable(logging.CRITICAL)
     
     logger = logging.getLogger()
-    logger.info(f"calculate_average(): started")
+    logger.info(f"calculate_average(): started") #this is an info message
     
     total_score = sum(scores)
     total_assignments = len(scores)
     
     # add debug logging here
-    
-    average = total_score // total_assignments
+    logger.debug(f"total_score = {total_score}") #this is a debug message
+    logger.debug(f"total_assignments = {total_assignments}")
+
+    average = total_score / total_assignments
     
     # add a debug logging here
-    
+    logger.debug(f"average before rounding = {average}")
+
     return round(average,2)
 
 print(calculate_average([85, 90, 88]))

@@ -1,0 +1,4 @@
+INFO:root:calculate_average(): started
+DEBUG:root:total_score = 263
+DEBUG:root:total_assignments = 3
+DEBUG:root:average before rounding = 87.66666666666667
