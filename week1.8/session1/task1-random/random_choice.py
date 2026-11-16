@@ -7,5 +7,14 @@ with open("names.txt") as infile:
 
 # Ask user to enter a number, then randomly choose that many names
 # from the list, avoiding any duplicate choices
-
 # Display the chosen names, one per line
+
+count = int(input("How many names do you want to choose? "))
+if count < 0 or count > len(names):
+    print(f"Please choose a number between 0 and {len(names)}.")
+else:
+    chosen_names = random.sample(names, count)
+    
+    for name in chosen_names:
+        print(name)
+
